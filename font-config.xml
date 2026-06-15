@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+    <!-- OpenOS Font Aliases -->
+    <!-- Maps SF Pro fonts to available alternatives -->
+
+    <match target="pattern">
+        <test name="family" qual="any">
+            <string>SF Pro Display</string>
+        </test>
+        <edit name="family" mode="assign" binding="same">
+            <string>Inter</string>
+        </edit>
+    </match>
+
+    <match target="pattern">
+        <test name="family" qual="any">
+            <string>SF Pro Text</string>
+        </test>
+        <edit name="family" mode="assign" binding="same">
+            <string>Inter</string>
+        </edit>
+    </match>
+
+    <match target="pattern">
+        <test name="family" qual="any">
+            <string>SF Mono</string>
+        </test>
+        <edit name="family" mode="assign" binding="same">
+            <string>JetBrains Mono</string>
+        </edit>
+    </match>
+
+    <match target="pattern">
+        <test name="family" qual="any">
+            <string>San Francisco</string>
+        </test>
+        <edit name="family" mode="assign" binding="same">
+            <string>Inter</string>
+        </edit>
+    </match>
+
+    <match target="pattern">
+        <test name="family" qual="any">
+            <string>.SF NS Display</string>
+        </test>
+        <edit name="family" mode="assign" binding="same">
+            <string>Inter</string>
+        </edit>
+    </match>
+
+    <match target="pattern">
+        <test name="family" qual="any">
+            <string>.SF NS Text</string>
+        </test>
+        <edit name="family" mode="assign" binding="same">
+            <string>Inter</string>
+        </edit>
+    </match>
+
+    <!-- Default font settings -->
+    <match target="pattern">
+        <test name="family" qual="any">
+            <string>sans-serif</string>
+        </test>
+        <edit name="family" mode="prepend" binding="strong">
+            <string>Inter</string>
+        </edit>
+    </match>
+
+    <match target="pattern">
+        <test name="family" qual="any">
+            <string>monospace</string>
+        </test>
+        <edit name="family" mode="prepend" binding="strong">
+            <string>JetBrains Mono</string>
+        </edit>
+    </match>
+</fontconfig>
