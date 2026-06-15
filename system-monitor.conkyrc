@@ -1,0 +1,87 @@
+--[[
+OpenOS System Monitor Widget
+Glassmorphic system info display
+]]
+
+conky.config = {
+    -- Window settings
+    alignment = 'top_right',
+    background = false,
+    border_width = 0,
+    cpu_avg_samples = 2,
+    default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'Inter:size=10',
+    gap_x = 30,
+    gap_y = 60,
+    minimum_height = 200,
+    minimum_width = 280,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_argb_visual = true,
+    own_window_argb_value = 180,
+    own_window_colour = '0A0A12',
+    own_window_transparent = false,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    stippled_borders = 0,
+    update_interval = 2.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false,
+
+    -- Colors matching OpenOS theme
+    color0 = 'FFFFFF',    -- White
+    color1 = 'A78BFA',    -- Purple accent
+    color2 = '8B5CF6',    -- Purple alt
+    color3 = '60A5FA',    -- Blue
+    color4 = '34D399',    -- Green
+    color5 = 'FBBF24',    -- Yellow
+    color6 = 'F87171',    -- Red
+    color7 = 'B0B0C0',    -- Gray text
+}
+
+conky.text = [[
+${color1}${font Inter:size=14}OpenOS System${font}
+${color7}${hr 1}
+
+${color0}${font Inter:size=11}CPU${font} ${alignr}${color3}${cpu cpu0}%
+${color7}${cpubar cpu0 8,260}
+${color0}${font Inter:size=9}${top name 1}${alignr}${top cpu 1}%${font}
+${color0}${font Inter:size=9}${top name 2}${alignr}${top cpu 2}%${font}
+${color0}${font Inter:size=9}${top name 3}${alignr}${top cpu 3}%${font}
+
+${color0}${font Inter:size=11}RAM${font} ${alignr}${color3}${memperc}%
+${color7}${membar 8,260}
+${color0}${font Inter:size=9}${mem} / ${memmax}${font}
+
+${color0}${font Inter:size=11}Storage${font} ${alignr}${color3}${fs_used_perc /}%
+${color7}${fs_bar 8,260 /}
+${color0}${font Inter:size=9}${fs_used /} / ${fs_size /}${font}
+
+${color0}${font Inter:size=11}Network${font}
+${color7}Down: ${color3}${downspeedf wlo1} KB/s ${alignr}${totaldown wlo1}
+${color7}Up: ${color3}${upspeedf wlo1} KB/s ${alignr}${totalup wlo1}
+
+${color0}${font Inter:size=11}System${font}
+${color7}Uptime: ${color0}${uptime}
+${color7}Kernel: ${color0}${kernel}
+${color7}Load: ${color0}${loadavg}
+
+${color1}${hr 1}
+${color0}${font Inter:size=9}OpenOS / bNode v1.0${font}
+]]
