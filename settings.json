@@ -1,0 +1,21 @@
+{
+    "workbench.colorTheme": "Dark Modern",
+    "workbench.iconTheme": "WhiteSur-dark",
+    "editor.fontFamily": "JetBrains Mono, Inter, monospace",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.6,
+    "editor.renderWhitespace": "boundary",
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "window.restoreWindows": "none",
+    "window.newWindowDimensions": "inherit",
+    "telemetry.telemetryLevel": "off",
+    "telemetry.enableTelemetry": false,
+    "extensions.autoUpdate": false,
+    "update.mode": "none",
+    "security.workspace.trust.enabled": true,
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false
+}
