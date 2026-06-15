@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=OpenOS-Dark
+Comment=Glassmorphic dark theme for OpenOS
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=OpenOS-Dark
+GtkTheme=OpenOS-Dark
+IconTheme=WhiteSur-dark
+CursorTheme=WhiteSur-cursors
+CursorSize=24
+NotificationTheme=slider

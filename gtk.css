@@ -1,0 +1,385 @@
+
+/* OpenOS Glassmorphic Theme - Dark Variant */
+/* Based on WhiteSur with custom glassmorphic tweaks */
+
+@define-color bg_color rgba(18, 18, 28, 0.85);
+@define-color fg_color #ffffff;
+@define-color base_color rgba(25, 25, 38, 0.7);
+@define-color text_color #e0e0f0;
+@define-color selected_bg_color rgba(139, 92, 246, 0.6);
+@define-color selected_fg_color #ffffff;
+@define-color accent_color #a78bfa;
+@define-color accent_alt #8b5cf6;
+@define-color border_color rgba(255, 255, 255, 0.12);
+@define-color shadow_color rgba(0, 0, 0, 0.3);
+
+/* Window styling */
+window,
+dialog,
+.message-dialog,
+printdialog,
+window.background {
+    background-color: @bg_color;
+    color: @fg_color;
+    border-radius: 16px;
+    border: 1px solid @border_color;
+    box-shadow: 0 8px 32px @shadow_color;
+}
+
+window.csd {
+    border-radius: 16px;
+    border: 1px solid @border_color;
+}
+
+window.csd decoration {
+    border-radius: 16px;
+    border: 1px solid @border_color;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px @border_color;
+    margin: 12px;
+}
+
+/* Header bar */
+headerbar,
+.titlebar {
+    background: linear-gradient(180deg, rgba(30, 30, 45, 0.9) 0%, rgba(20, 20, 32, 0.85) 100%);
+    border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid @border_color;
+    padding: 8px 16px;
+    min-height: 42px;
+}
+
+headerbar:backdrop,
+.titlebar:backdrop {
+    background: linear-gradient(180deg, rgba(25, 25, 38, 0.8) 0%, rgba(18, 18, 28, 0.75) 100%);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(180deg, rgba(60, 60, 80, 0.6) 0%, rgba(45, 45, 65, 0.5) 100%);
+    border: 1px solid @border_color;
+    border-radius: 10px;
+    padding: 8px 16px;
+    color: @fg_color;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(180deg, rgba(80, 80, 110, 0.7) 0%, rgba(60, 60, 90, 0.6) 100%);
+    border-color: rgba(167, 139, 250, 0.4);
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
+}
+
+button:active,
+button:checked {
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.5) 0%, rgba(109, 62, 196, 0.4) 100%);
+    border-color: @accent_color;
+}
+
+button.suggested-action {
+    background: linear-gradient(180deg, @accent_color 0%, @accent_alt 100%);
+    border-color: @accent_alt;
+    color: #ffffff;
+}
+
+button.suggested-action:hover {
+    background: linear-gradient(180deg, #b8a0fc 0%, #a78bfa 100%);
+    box-shadow: 0 0 16px rgba(139, 92, 246, 0.4);
+}
+
+/* Entries (text fields) */
+entry {
+    background: rgba(20, 20, 32, 0.6);
+    border: 1px solid @border_color;
+    border-radius: 10px;
+    padding: 8px 12px;
+    color: @text_color;
+    caret-color: @accent_color;
+}
+
+entry:focus {
+    border-color: @accent_color;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+entry selection {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+/* Lists and tree views */
+treeview,
+list {
+    background-color: transparent;
+    color: @text_color;
+}
+
+treeview:selected,
+list row:selected {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+    border-radius: 8px;
+}
+
+treeview:selected:hover,
+list row:selected:hover {
+    background-color: rgba(139, 92, 246, 0.7);
+}
+
+/* Scrollbars */
+scrollbar {
+    background: transparent;
+    border-radius: 8px;
+}
+
+scrollbar slider {
+    background: rgba(100, 100, 130, 0.4);
+    border-radius: 8px;
+    min-width: 8px;
+    min-height: 8px;
+}
+
+scrollbar slider:hover {
+    background: rgba(139, 92, 246, 0.6);
+}
+
+/* Menus and popovers */
+menu,
+.context-menu,
+popover {
+    background: rgba(22, 22, 35, 0.92);
+    border: 1px solid @border_color;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+menuitem,
+popover modelbutton {
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: @fg_color;
+}
+
+menuitem:hover,
+popover modelbutton:hover {
+    background-color: rgba(139, 92, 246, 0.25);
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(25, 25, 40, 0.95);
+    border: 1px solid @border_color;
+    border-radius: 10px;
+    padding: 8px 12px;
+    color: @fg_color;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Progress bars */
+progressbar {
+    background: rgba(20, 20, 32, 0.5);
+    border-radius: 8px;
+}
+
+progressbar trough {
+    background: rgba(20, 20, 32, 0.5);
+    border-radius: 8px;
+    min-height: 8px;
+}
+
+progressbar progress {
+    background: linear-gradient(90deg, @accent_alt, @accent_color);
+    border-radius: 8px;
+    min-height: 8px;
+}
+
+/* Scales (sliders) */
+scale {
+    min-height: 24px;
+}
+
+scale trough {
+    background: rgba(40, 40, 60, 0.5);
+    border-radius: 12px;
+    min-height: 6px;
+}
+
+scale highlight {
+    background: linear-gradient(90deg, @accent_alt, @accent_color);
+    border-radius: 12px;
+}
+
+scale slider {
+    background: linear-gradient(180deg, #e0e0f0, #b0b0c0);
+    border: 2px solid @accent_color;
+    border-radius: 50%;
+    min-width: 18px;
+    min-height: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Switches */
+switch {
+    background: rgba(40, 40, 60, 0.6);
+    border-radius: 14px;
+    min-width: 44px;
+    min-height: 24px;
+    border: 1px solid @border_color;
+}
+
+switch:checked {
+    background: linear-gradient(180deg, @accent_color, @accent_alt);
+    border-color: @accent_alt;
+}
+
+switch slider {
+    background: #ffffff;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Notebook (tabs) */
+notebook {
+    background: transparent;
+    border: none;
+}
+
+notebook tab {
+    background: rgba(30, 30, 45, 0.5);
+    border-radius: 10px 10px 0 0;
+    padding: 8px 16px;
+    color: @fg_alt;
+    margin: 0 4px;
+}
+
+notebook tab:checked {
+    background: rgba(139, 92, 246, 0.3);
+    color: @fg_color;
+    border-bottom: 2px solid @accent_color;
+}
+
+/* Sidebar (like in file manager) */
+.sidebar {
+    background: rgba(20, 20, 32, 0.6);
+    border-right: 1px solid @border_color;
+}
+
+.sidebar row {
+    border-radius: 8px;
+    margin: 2px 8px;
+    padding: 8px 12px;
+}
+
+.sidebar row:selected {
+    background: rgba(139, 92, 246, 0.3);
+}
+
+/* Notifications */
+.notification {
+    background: rgba(22, 22, 35, 0.95);
+    border: 1px solid @border_color;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Calendar and date picker */
+calendar {
+    background: rgba(20, 20, 32, 0.7);
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid @border_color;
+}
+
+calendar:selected {
+    background: @accent_color;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+/* Infobar (warnings, errors) */
+infobar {
+    border-radius: 10px;
+    margin: 8px;
+}
+
+infobar.info {
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+infobar.warning {
+    background: rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+infobar.error {
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+/* Search bar */
+.search-bar {
+    background: rgba(25, 25, 38, 0.8);
+    border: 1px solid @border_color;
+    border-radius: 12px;
+    padding: 8px 16px;
+}
+
+/* App grid (like in launcher) */
+.app-grid {
+    background: rgba(18, 18, 28, 0.9);
+    border-radius: 24px;
+    border: 1px solid @border_color;
+    padding: 24px;
+}
+
+.app-grid icon {
+    border-radius: 16px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.app-grid icon:hover {
+    background: rgba(139, 92, 246, 0.2);
+    transform: scale(1.05);
+}
+
+/* Terminal styling */
+terminal-window {
+    background: rgba(15, 15, 25, 0.95);
+    border-radius: 16px;
+    border: 1px solid @border_color;
+}
+
+terminal-window notebook tab {
+    background: rgba(30, 30, 45, 0.6);
+    border-radius: 8px 8px 0 0;
+}
+
+terminal-window notebook tab:checked {
+    background: rgba(139, 92, 246, 0.3);
+}
+
+/* Animation keyframes for subtle effects */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(139, 92, 246, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+}
+
+/* Focus indicators */
+:focus {
+    outline: 2px solid @accent_color;
+    outline-offset: -2px;
+    border-radius: 8px;
+}
+
+/* Selection styling */
+::selection {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
