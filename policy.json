@@ -1,0 +1,20 @@
+{
+  "BraveRewardsDisabled": true,
+  "BraveWalletDisabled": true,
+  "BraveVPNDisabled": true,
+  "BraveNewsDisabled": true,
+  "TorDisabled": false,
+  "DefaultSearchProviderEnabled": true,
+  "DefaultSearchProviderName": "DuckDuckGo",
+  "DefaultSearchProviderSearchURL": "https://duckduckgo.com/?q={searchTerms}",
+  "HomepageLocation": "about:blank",
+  "NewTabPageLocation": "about:blank",
+  "PasswordManagerEnabled": false,
+  "AutofillAddressEnabled": false,
+  "AutofillCreditCardEnabled": false,
+  "SafeBrowsingEnabled": true,
+  "UrlKeyedAnonymizedDataCollectionEnabled": false,
+  "BlockThirdPartyCookies": true,
+  "EnableDoNotTrack": true,
+  "GlobalPrivacyControlEnabled": true
+}
