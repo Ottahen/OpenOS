@@ -1,0 +1,89 @@
+# OpenOS (bNode) Installed Packages
+# Generated during installation
+
+## Core System
+ubuntu-desktop / cinnamon-desktop-environment
+gnome-tweaks
+dconf-editor
+flatpak
+gnome-software-plugin-flatpak
+
+## Browser
+brave-browser (from official Brave repo)
+
+## Productivity
+onlyoffice-desktopeditors (from official OnlyOffice repo)
+
+## Development
+code (VS Code from Microsoft repo)
+git
+curl
+wget
+python3
+python3-pip
+
+## AI
+ollama (from official install script)
+
+## UI/UX Components
+plank (Apple-style dock)
+rofi (application launcher)
+picom (compositor for blur/transparency)
+dunst (notification daemon)
+conky-all (system monitor widgets)
+feh (image viewer/wallpaper)
+nitrogen (wallpaper manager)
+wmctrl (window control)
+xdotool (automation)
+libnotify-bin (notifications)
+xbindkeys (keyboard shortcuts)
+
+## Fonts
+fonts-inter
+fonts-jetbrains-mono
+
+## Security
+ufw (Uncomplicated Firewall)
+apparmor
+apparmor-profiles
+apparmor-utils
+unattended-upgrades
+
+## Performance
+zram-tools
+TLP (power management)
+TLP-RDW (radio device wizard)
+preload
+
+## Utilities
+htop
+neofetch
+sassc (SASS compiler)
+optipng (PNG optimization)
+inkscape (SVG editor)
+
+## Build Dependencies (for theme compilation)
+libglib2.0-dev
+libgtk-3-dev
+libgtk-4-dev
+libgtk-3-0
+libgtk-4-1
+
+## GNOME Extensions Support
+gnome-shell-extension-manager
+chrome-gnome-shell
+mutter
+
+## Display/Graphics
+x11-xserver-utils
+dbus-x11
+mesa-utils
+
+## Theme Dependencies
+gir1.2-gtkclutter-1.0
+gir1.2-clutter-1.0
+libclutter-1.0-0
+libclutter-gst-3.0-0
+libclutter-gtk-1.0-0
+libbluray2
+libgjs0g
