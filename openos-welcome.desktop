@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=OpenOS Welcome
+Comment=Welcome screen and getting started guide
+Exec=/usr/local/bin/openos-welcome
+Icon=help-about
+Type=Application
+Categories=System;Settings;
+Terminal=false

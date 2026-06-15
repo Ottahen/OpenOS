@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=OpenOS Settings
+Comment=System settings panel
+Exec=gnome-control-center
+Icon=preferences-system
+Type=Application
+Categories=Settings;System;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Theme Switcher
+Comment=Toggle between Light and Dark themes
+Exec=/usr/local/bin/openos-theme
+Icon=preferences-desktop-theme
+Type=Application
+Categories=Settings;
+Terminal=false
